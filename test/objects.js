@@ -979,6 +979,18 @@
     Proto.prototype.b = 1;
     var protoObj = new Proto();
     assert.deepEqual(_.mapObject(protoObj, _.identity), {a: 1}, 'ignore inherited values from prototypes');
+  });
 
+  test('idx', function(assert) {
+    var normalObject = {a: 'a', b: 'b', d: {e: 'e'}};
+    assert.strictEqual(_.idx(normalObject, 'a'), 'a', 'get the value of existing property');
+    assert.strictEqual(_.idx(normalObject, 'c'), null, 'return null if property does not exist');
+    assert.strictEqual(_.idx(normalObject, 'c', 'defaultValue'), 'defaultValue', 'return provided default value if property does not exist');
+    assert.strictEqual(_.idx(normalObject, ['d', 'e']), 'e', 'get the value of an existing property path');
+    assert.strictEqual(_.idx(normalObject, ['c', 'd']), null, 'return null if property path does not exist');
+    assert.strictEqual(_.idx(normalObject, ['c', 'd'], 'defaultValue'), 'defaultValue', 'return provided default value if property path does not exist');
+    assert.strictEqual(_.idx(normalObject, null, 'defaultValue'), 'defaultValue', 'return null or defaultValue if key is null or undefined');
+    assert.strictEqual(_.idx(null, 'a'), null, 'is null safe');
+    assert.strictEqual(_.idx(null, 'a', 'defaultValue'), 'defaultValue', 'is null safe and return the provided default value');
   });
 }());

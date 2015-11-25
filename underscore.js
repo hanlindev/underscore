@@ -139,6 +139,24 @@
     };
   };
 
+  _.idx = function(obj, propertyPath, defaultValue) {
+    if (_.isUndefined(defaultValue)) {
+      defaultValue = null;
+    }
+
+    if (_.isNull(obj) || _.isUndefined(obj) || _.isNull(propertyPath) || _.isUndefined(propertyPath)) {
+      return defaultValue;
+    } else if (_.isArray(propertyPath)) {
+      if (propertyPath.length === 0) {
+        return obj;
+      } else {
+        return _.idx(obj[propertyPath[0]], _.rest(propertyPath), defaultValue);
+      }
+    } else {
+      return _.idx(obj, [propertyPath], defaultValue);
+    }
+  };
+
   // Helper for collection methods to determine whether a collection
   // should be iterated as an array or as an object.
   // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength

@@ -293,6 +293,7 @@
       <li>- <a href="#matcher">matcher</a></li>
       <li>- <a href="#property">property</a></li>
       <li>- <a href="#propertyOf">propertyOf</a></li>
+      <li>- <a href="#idx">idx</a></li>
       <li>- <a href="#isEqual">isEqual</a></li>
       <li>- <a href="#isMatch">isMatch</a></li>
       <li>- <a href="#isEmpty">isEmpty</a></li>
@@ -1571,6 +1572,23 @@ var stooge = {name: 'moe'};
 var stooge = {name: 'moe'};
 _.propertyOf(stooge)('name');
 =&gt; 'moe'</pre>
+
+      <p id="idx">
+        <b class="header">idx</b><code>_.idx(obj, propertyPath, [defaultValue])</code>
+        <br />
+        Returns the value of the object at the given propertyPath. If there is only
+        one property in the path, you can just pass in the property name. If the property
+        path does not exist or obj is null or undefined, it will return null if
+        defaultValue is not given, otherwise defaultValue will be returned.
+      </p>
+      <pre>
+var obj = {name: 'moe', detail: {gender: 'male'}};
+_.idx(obj, ['detail', 'gender']);
+=&gt; 'male'
+_.idx(undefined, 'name', 'defaultValue');
+=&gt; 'defaultValue'
+_.idx(obj, null);
+=&gt; null</pre>
 
       <p id="matcher">
         <b class="header">matcher</b><code>_.matcher(attrs)</code>
