@@ -1,5 +1,5 @@
 {
-  "name": "underscore",
+  "name": "@hanlindev/underscore",
   "description": "JavaScript's functional programming helper library.",
   "homepage": "http://underscorejs.org",
   "keywords": [
