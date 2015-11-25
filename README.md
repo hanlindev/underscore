@@ -30,3 +30,7 @@ I created this fork to include some utility functions that I find very useful. T
 ######Object:
 
 *  idx
+
+Please refer to index.html for documentation.
+
+To avoid confusion, I changed the major version to 2 from 1.

@@ -15,7 +15,7 @@
     "url": "git://github.com/hanlindev/underscore.git"
   },
   "main": "underscore.js",
-  "version": "1.8.3",
+  "version": "2.0.0",
   "devDependencies": {
     "coveralls": "^2.11.2",
     "docco": "*",
