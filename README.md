@@ -20,3 +20,13 @@ https://github.com/documentcloud
 
 Many thanks to our contributors:
 https://github.com/jashkenas/underscore/contributors
+
+
+Fork Note
+---------
+Since underscore is in maintenance mode as mentioned in [#2362](https://github.com/jashkenas/underscore/issues/2362),
+I created this fork to include some utility functions that I find very useful. They are:
+
+######Object:
+
+*  idx

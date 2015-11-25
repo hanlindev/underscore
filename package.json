@@ -9,10 +9,10 @@
     "client",
     "browser"
   ],
-  "author": "Jeremy Ashkenas <jeremy@documentcloud.org>",
+  "author": "Lin Han <hanlin.dev@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jashkenas/underscore.git"
+    "url": "git://github.com/hanlindev/underscore.git"
   },
   "main": "underscore.js",
   "version": "1.8.3",
